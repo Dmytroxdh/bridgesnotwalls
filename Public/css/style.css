@@ -11,7 +11,7 @@ header{
     align-items: center;
     list-style: none;
     justify-content: space-around;
-    background-color: #11235A;
+    background-color: #4B4848;
     margin: 0;
     
 }
@@ -29,18 +29,31 @@ a{
 /*Title card*/
 .title-card{
     width: 100%;
-    min-height: 90vh;
-    background-color: #596FB7;
+    height: 500px;
+    background-color: #3D214F;
     text-align: center;
 }
 h1{
     margin: 0px;
-    padding-top: 100px;
-    font-size: 5rem;
-}
-h2{
+    padding-top: 200px;
     font-size: 3rem;
-    margin: 0px
+    color: silver;
+    z-index: 3;
+    position: relative;
+}
+h4{
+  margin: 0px;
+    font-size: 2em;
+    color: silver;
+    position: relative;
+    z-index: 3;
+}
+.bride{
+  opacity: 0.3;
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  left: 0;
 }
 
 /* Body */
@@ -51,52 +64,119 @@ h2{
     align-items: center;
     width: 100%;
 }
+.card-intro{
+  width: 80%;
+  background-color: #AFC900;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2.5rem;
+  color: #4B4848;
+}
 .card-container{
-    padding-top: 60px;
+    padding-top: 20px;
     display: grid;
     grid-template: 1fr / 1fr 1fr;
     width: 80%;
     justify-content: space-evenly;
-    background-color: #F6ECA9;
+    background-color: #AFC900;
+    padding-bottom: 60px;
 }
-.card{
-    margin: 5%;
-    width: 90%;
-}
-.img-frame{
-   width: 100%;
-   position: relative;
-   background-color: white;
-   object-fit: fill;
-}
-.card-img{
-    min-height: 100%;
-    min-width: 100%;
+.container {
     position: relative;
-    z-index: 3;
-    transition: opacity, 1s;
-    object-fit: contain;
-}
-.card-img:hover{
-    opacity: 20%;
-}
-h3{
+    margin: 20px;
+    width: 90%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .overlay {
     position: absolute;
-    top: 10px;
-    left: 5px;
-    z-index: 2;
-    font-size: 3rem;
-}
-p{
+    overflow: hidden;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #3D214F;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+  
+  .container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .text {
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
     position: absolute;
-    top: 100px;
-    left: 5px;
-    z-index: 2;
-    font-size: 1.5rem;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  .h3{
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+  footer{
+    height: 100px;
+    width: 100%;
+    background-color: #4B4848;
+  }
+
+
+/* Charity pages */
+
+.intro-block{
+  width: 100%;
+  height: 300px;
+  background-color: #3D214F;
+  display: flex;
+  flex-basis: 1fr, 1fr;
+  justify-content: center;
 }
-
-
-
+.intro-block-logo{
+  height: 200px;
+  margin-top: 50px;
+}
+.charity-page-text{
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  align-content: center;
+  justify-content: center;
+  width: 80%;
+  margin: 10%;
+}
+.charity-page-p{
+  font-size: 2rem;
+}
+.left{
+  text-align: right;
+}
+.charity-page-img{
+  width: 90%;
+  margin: 5%;
+  border-radius: 10px;
+}
+.button{
+  background-color: #3D214F;
+  text-align: center;
+  margin: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 2rem;
+  border-radius: 10px;  
+}
 
 
 
@@ -123,7 +203,7 @@ p{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #AFC900;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -137,3 +217,6 @@ p{
   }
   .dropdown a:hover {background-color: #ddd;}
   .show {display: block;}
+  .charlogos{
+    width: 150px;
+  }
