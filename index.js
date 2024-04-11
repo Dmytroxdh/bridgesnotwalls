@@ -8,6 +8,7 @@ const port = 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.listen(3000, () =>{
     console.log(`server listening on port ${port}`);
